@@ -27,6 +27,11 @@ class Settings(BaseSettings):
     jwt_algorithm: str = "HS256"
     jwt_expire_minutes: int = 1440
 
+    # AI / Voice
+    openai_api_key: str = ""
+    vapi_api_key: str = ""
+    vapi_webhook_secret: str = ""
+
 
 @lru_cache
 def get_settings() -> Settings:
