@@ -57,8 +57,8 @@ async def health() -> dict:
 # from app.rag.router import router as rag_router
 # app.include_router(rag_router, prefix="/rag", tags=["rag"])
 
-# from app.voice.router import router as voice_router
-# app.include_router(voice_router, prefix="/voice", tags=["voice"])
+from app.voice.router import router as voice_router
+app.include_router(voice_router, prefix="/voice", tags=["voice"])
 
 # from app.extraction.router import router as extraction_router
 # app.include_router(extraction_router, prefix="/extraction", tags=["extraction"])
