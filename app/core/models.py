@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import uuid
 from datetime import datetime
 from enum import Enum as PyEnum
@@ -190,3 +191,10 @@ class Extraction(Base):
     )
 
     document: Mapped["Document"] = relationship(back_populates="extractions")
+=======
+from sqlalchemy.orm import DeclarativeBase
+
+
+class Base(DeclarativeBase):
+    pass
+>>>>>>> origin/feature/phase1-alembic
