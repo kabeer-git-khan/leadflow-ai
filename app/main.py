@@ -52,19 +52,17 @@ async def health() -> dict:
         "version": "0.1.0",
     }
 
-
-# ── Routers (uncomment as each phase is built) ─────────
-# from app.rag.router import router as rag_router
-# app.include_router(rag_router, prefix="/rag", tags=["rag"])
+from app.rag.router import router as rag_router
+app.include_router(rag_router, prefix="/rag", tags=["rag"])
 
 from app.voice.router import router as voice_router
 app.include_router(voice_router, prefix="/voice", tags=["voice"])
 
-# from app.extraction.router import router as extraction_router
-# app.include_router(extraction_router, prefix="/extraction", tags=["extraction"])
+from app.extraction.router import router as extraction_router
+app.include_router(extraction_router, prefix="/extraction", tags=["extraction"])
 
-# from app.automation.router import router as automation_router
-# app.include_router(automation_router, prefix="/automation", tags=["automation"])
+from app.automation.router import router as automation_router
+app.include_router(automation_router, prefix="/automation", tags=["automation"])
 
 # from app.leads.router import router as leads_router
 # app.include_router(leads_router, prefix="/leads", tags=["leads"])
