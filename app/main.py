@@ -64,5 +64,5 @@ app.include_router(extraction_router, prefix="/extraction", tags=["extraction"])
 from app.automation.router import router as automation_router
 app.include_router(automation_router, prefix="/automation", tags=["automation"])
 
-# from app.leads.router import router as leads_router
-# app.include_router(leads_router, prefix="/leads", tags=["leads"])
+from app.leads.router import router as leads_router
+app.include_router(leads_router, prefix="/leads", tags=["leads"])
